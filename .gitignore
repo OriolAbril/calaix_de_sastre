@@ -1,5 +1,6 @@
 # cache files
 *.pkl
+*.help.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
