@@ -1,0 +1,381 @@
+home_team,away_team,home_goals,away_goals
+Aston Villa,Arsenal,1,2
+Cardiff City,Arsenal,0,3
+Chelsea,Arsenal,6,0
+Crystal Palace,Arsenal,0,2
+Everton,Arsenal,3,0
+Fulham,Arsenal,1,3
+Hull City,Arsenal,0,3
+Liverpool,Arsenal,5,1
+Manchester City,Arsenal,6,3
+Manchester United,Arsenal,1,0
+Newcastle United,Arsenal,0,1
+Norwich City,Arsenal,0,2
+Southampton,Arsenal,2,2
+Stoke City,Arsenal,1,0
+Sunderland,Arsenal,1,3
+Swansea City,Arsenal,1,2
+Tottenham Hotspur,Arsenal,0,1
+West Bromwich Albion,Arsenal,1,1
+West Ham United,Arsenal,1,3
+Arsenal,Aston Villa,1,3
+Cardiff City,Aston Villa,0,0
+Chelsea,Aston Villa,2,1
+Crystal Palace,Aston Villa,1,0
+Everton,Aston Villa,2,1
+Fulham,Aston Villa,2,0
+Hull City,Aston Villa,0,0
+Liverpool,Aston Villa,2,2
+Manchester City,Aston Villa,4,0
+Manchester United,Aston Villa,4,1
+Newcastle United,Aston Villa,1,0
+Norwich City,Aston Villa,0,1
+Southampton,Aston Villa,2,3
+Stoke City,Aston Villa,2,1
+Sunderland,Aston Villa,0,1
+Swansea City,Aston Villa,4,1
+Tottenham Hotspur,Aston Villa,3,0
+West Bromwich Albion,Aston Villa,2,2
+West Ham United,Aston Villa,0,0
+Arsenal,Cardiff City,2,0
+Aston Villa,Cardiff City,2,0
+Chelsea,Cardiff City,4,1
+Crystal Palace,Cardiff City,2,0
+Everton,Cardiff City,2,1
+Fulham,Cardiff City,1,2
+Hull City,Cardiff City,1,1
+Liverpool,Cardiff City,3,1
+Manchester City,Cardiff City,4,2
+Manchester United,Cardiff City,2,0
+Newcastle United,Cardiff City,3,0
+Norwich City,Cardiff City,0,0
+Southampton,Cardiff City,0,1
+Stoke City,Cardiff City,0,0
+Sunderland,Cardiff City,4,0
+Swansea City,Cardiff City,3,0
+Tottenham Hotspur,Cardiff City,1,0
+West Bromwich Albion,Cardiff City,3,3
+West Ham United,Cardiff City,2,0
+Arsenal,Chelsea,0,0
+Aston Villa,Chelsea,1,0
+Cardiff City,Chelsea,1,2
+Crystal Palace,Chelsea,1,0
+Everton,Chelsea,1,0
+Fulham,Chelsea,1,3
+Hull City,Chelsea,0,2
+Liverpool,Chelsea,0,2
+Manchester City,Chelsea,0,1
+Manchester United,Chelsea,0,0
+Newcastle United,Chelsea,2,0
+Norwich City,Chelsea,1,3
+Southampton,Chelsea,0,3
+Stoke City,Chelsea,3,2
+Sunderland,Chelsea,3,4
+Swansea City,Chelsea,0,1
+Tottenham Hotspur,Chelsea,1,1
+West Bromwich Albion,Chelsea,1,1
+West Ham United,Chelsea,0,3
+Arsenal,Crystal Palace,2,0
+Aston Villa,Crystal Palace,0,1
+Cardiff City,Crystal Palace,0,3
+Chelsea,Crystal Palace,2,1
+Everton,Crystal Palace,2,3
+Fulham,Crystal Palace,2,2
+Hull City,Crystal Palace,0,1
+Liverpool,Crystal Palace,3,1
+Manchester City,Crystal Palace,1,0
+Manchester United,Crystal Palace,2,0
+Newcastle United,Crystal Palace,1,0
+Norwich City,Crystal Palace,1,0
+Southampton,Crystal Palace,2,0
+Stoke City,Crystal Palace,2,1
+Sunderland,Crystal Palace,0,0
+Swansea City,Crystal Palace,1,1
+Tottenham Hotspur,Crystal Palace,2,0
+West Bromwich Albion,Crystal Palace,2,0
+West Ham United,Crystal Palace,0,1
+Arsenal,Everton,1,1
+Aston Villa,Everton,0,2
+Cardiff City,Everton,0,0
+Chelsea,Everton,1,0
+Crystal Palace,Everton,0,0
+Fulham,Everton,1,3
+Hull City,Everton,0,2
+Liverpool,Everton,4,0
+Manchester City,Everton,3,1
+Manchester United,Everton,0,1
+Newcastle United,Everton,0,3
+Norwich City,Everton,2,2
+Southampton,Everton,2,0
+Stoke City,Everton,1,1
+Sunderland,Everton,0,1
+Swansea City,Everton,1,2
+Tottenham Hotspur,Everton,1,0
+West Bromwich Albion,Everton,1,1
+West Ham United,Everton,2,3
+Arsenal,Fulham,2,0
+Aston Villa,Fulham,1,2
+Cardiff City,Fulham,3,1
+Chelsea,Fulham,2,0
+Crystal Palace,Fulham,1,4
+Everton,Fulham,4,1
+Hull City,Fulham,6,0
+Liverpool,Fulham,4,0
+Manchester City,Fulham,5,0
+Manchester United,Fulham,2,2
+Newcastle United,Fulham,1,0
+Norwich City,Fulham,1,2
+Southampton,Fulham,2,0
+Stoke City,Fulham,4,1
+Sunderland,Fulham,0,1
+Swansea City,Fulham,2,0
+Tottenham Hotspur,Fulham,3,1
+West Bromwich Albion,Fulham,1,1
+West Ham United,Fulham,3,0
+Arsenal,Hull City,2,0
+Aston Villa,Hull City,3,1
+Cardiff City,Hull City,0,4
+Chelsea,Hull City,2,0
+Crystal Palace,Hull City,1,0
+Everton,Hull City,2,1
+Fulham,Hull City,2,2
+Liverpool,Hull City,2,0
+Manchester City,Hull City,2,0
+Manchester United,Hull City,3,1
+Newcastle United,Hull City,2,3
+Norwich City,Hull City,1,0
+Southampton,Hull City,4,1
+Stoke City,Hull City,1,0
+Sunderland,Hull City,0,2
+Swansea City,Hull City,1,1
+Tottenham Hotspur,Hull City,1,0
+West Bromwich Albion,Hull City,1,1
+West Ham United,Hull City,2,1
+Arsenal,Liverpool,2,0
+Aston Villa,Liverpool,0,1
+Cardiff City,Liverpool,3,6
+Chelsea,Liverpool,2,1
+Crystal Palace,Liverpool,3,3
+Everton,Liverpool,3,3
+Fulham,Liverpool,2,3
+Hull City,Liverpool,3,1
+Manchester City,Liverpool,2,1
+Manchester United,Liverpool,0,3
+Newcastle United,Liverpool,2,2
+Norwich City,Liverpool,2,3
+Southampton,Liverpool,0,3
+Stoke City,Liverpool,3,5
+Sunderland,Liverpool,1,3
+Swansea City,Liverpool,2,2
+Tottenham Hotspur,Liverpool,0,5
+West Bromwich Albion,Liverpool,1,1
+West Ham United,Liverpool,1,2
+Arsenal,Manchester City,1,1
+Aston Villa,Manchester City,3,2
+Cardiff City,Manchester City,3,2
+Chelsea,Manchester City,2,1
+Crystal Palace,Manchester City,0,2
+Everton,Manchester City,2,3
+Fulham,Manchester City,2,4
+Hull City,Manchester City,0,2
+Liverpool,Manchester City,3,2
+Manchester United,Manchester City,0,3
+Newcastle United,Manchester City,0,2
+Norwich City,Manchester City,0,0
+Southampton,Manchester City,1,1
+Stoke City,Manchester City,0,0
+Sunderland,Manchester City,1,0
+Swansea City,Manchester City,2,3
+Tottenham Hotspur,Manchester City,1,5
+West Bromwich Albion,Manchester City,2,3
+West Ham United,Manchester City,1,3
+Arsenal,Manchester United,0,0
+Aston Villa,Manchester United,0,3
+Cardiff City,Manchester United,2,2
+Chelsea,Manchester United,3,1
+Crystal Palace,Manchester United,0,2
+Everton,Manchester United,2,0
+Fulham,Manchester United,1,3
+Hull City,Manchester United,2,3
+Liverpool,Manchester United,1,0
+Manchester City,Manchester United,4,1
+Newcastle United,Manchester United,0,4
+Norwich City,Manchester United,0,1
+Southampton,Manchester United,1,1
+Stoke City,Manchester United,2,1
+Sunderland,Manchester United,1,2
+Swansea City,Manchester United,1,4
+Tottenham Hotspur,Manchester United,2,2
+West Bromwich Albion,Manchester United,0,3
+West Ham United,Manchester United,0,2
+Arsenal,Newcastle United,3,0
+Aston Villa,Newcastle United,1,2
+Cardiff City,Newcastle United,1,2
+Chelsea,Newcastle United,3,0
+Crystal Palace,Newcastle United,0,3
+Everton,Newcastle United,3,2
+Fulham,Newcastle United,1,0
+Hull City,Newcastle United,1,4
+Liverpool,Newcastle United,2,1
+Manchester City,Newcastle United,4,0
+Manchester United,Newcastle United,0,1
+Norwich City,Newcastle United,0,0
+Southampton,Newcastle United,4,0
+Stoke City,Newcastle United,1,0
+Sunderland,Newcastle United,2,1
+Swansea City,Newcastle United,3,0
+Tottenham Hotspur,Newcastle United,0,1
+West Bromwich Albion,Newcastle United,1,0
+West Ham United,Newcastle United,1,3
+Arsenal,Norwich City,4,1
+Aston Villa,Norwich City,4,1
+Cardiff City,Norwich City,2,1
+Chelsea,Norwich City,0,0
+Crystal Palace,Norwich City,1,1
+Everton,Norwich City,2,0
+Fulham,Norwich City,1,0
+Hull City,Norwich City,1,0
+Liverpool,Norwich City,5,1
+Manchester City,Norwich City,7,0
+Manchester United,Norwich City,4,0
+Newcastle United,Norwich City,2,1
+Southampton,Norwich City,4,2
+Stoke City,Norwich City,0,1
+Sunderland,Norwich City,0,0
+Swansea City,Norwich City,3,0
+Tottenham Hotspur,Norwich City,2,0
+West Bromwich Albion,Norwich City,0,2
+West Ham United,Norwich City,2,0
+Arsenal,Southampton,2,0
+Aston Villa,Southampton,0,0
+Cardiff City,Southampton,0,3
+Chelsea,Southampton,3,1
+Crystal Palace,Southampton,0,1
+Everton,Southampton,2,1
+Fulham,Southampton,0,3
+Hull City,Southampton,0,1
+Liverpool,Southampton,0,1
+Manchester City,Southampton,4,1
+Manchester United,Southampton,1,1
+Newcastle United,Southampton,1,1
+Norwich City,Southampton,1,0
+Stoke City,Southampton,1,1
+Sunderland,Southampton,2,2
+Swansea City,Southampton,0,1
+Tottenham Hotspur,Southampton,3,2
+West Bromwich Albion,Southampton,0,1
+West Ham United,Southampton,3,1
+Arsenal,Stoke City,3,1
+Aston Villa,Stoke City,1,4
+Cardiff City,Stoke City,1,1
+Chelsea,Stoke City,3,0
+Crystal Palace,Stoke City,1,0
+Everton,Stoke City,4,0
+Fulham,Stoke City,1,0
+Hull City,Stoke City,0,0
+Liverpool,Stoke City,1,0
+Manchester City,Stoke City,1,0
+Manchester United,Stoke City,3,2
+Newcastle United,Stoke City,5,1
+Norwich City,Stoke City,1,1
+Southampton,Stoke City,2,2
+Sunderland,Stoke City,1,0
+Swansea City,Stoke City,3,3
+Tottenham Hotspur,Stoke City,3,0
+West Bromwich Albion,Stoke City,1,2
+West Ham United,Stoke City,0,1
+Arsenal,Sunderland,4,1
+Aston Villa,Sunderland,0,0
+Cardiff City,Sunderland,2,2
+Chelsea,Sunderland,1,2
+Crystal Palace,Sunderland,3,1
+Everton,Sunderland,0,1
+Fulham,Sunderland,1,4
+Hull City,Sunderland,1,0
+Liverpool,Sunderland,2,1
+Manchester City,Sunderland,2,2
+Manchester United,Sunderland,0,1
+Newcastle United,Sunderland,0,3
+Norwich City,Sunderland,2,0
+Southampton,Sunderland,1,1
+Stoke City,Sunderland,2,0
+Swansea City,Sunderland,4,0
+Tottenham Hotspur,Sunderland,5,1
+West Bromwich Albion,Sunderland,3,0
+West Ham United,Sunderland,0,0
+Arsenal,Swansea City,2,2
+Aston Villa,Swansea City,1,1
+Cardiff City,Swansea City,1,0
+Chelsea,Swansea City,1,0
+Crystal Palace,Swansea City,0,2
+Everton,Swansea City,3,2
+Fulham,Swansea City,1,2
+Hull City,Swansea City,1,0
+Liverpool,Swansea City,4,3
+Manchester City,Swansea City,3,0
+Manchester United,Swansea City,2,0
+Newcastle United,Swansea City,1,2
+Norwich City,Swansea City,1,1
+Southampton,Swansea City,2,0
+Stoke City,Swansea City,1,1
+Sunderland,Swansea City,1,3
+Tottenham Hotspur,Swansea City,1,0
+West Bromwich Albion,Swansea City,0,2
+West Ham United,Swansea City,2,0
+Arsenal,Tottenham Hotspur,1,0
+Aston Villa,Tottenham Hotspur,0,2
+Cardiff City,Tottenham Hotspur,0,1
+Chelsea,Tottenham Hotspur,4,0
+Crystal Palace,Tottenham Hotspur,0,1
+Everton,Tottenham Hotspur,0,0
+Fulham,Tottenham Hotspur,1,2
+Hull City,Tottenham Hotspur,1,1
+Liverpool,Tottenham Hotspur,4,0
+Manchester City,Tottenham Hotspur,6,0
+Manchester United,Tottenham Hotspur,1,2
+Newcastle United,Tottenham Hotspur,0,4
+Norwich City,Tottenham Hotspur,1,0
+Southampton,Tottenham Hotspur,2,3
+Stoke City,Tottenham Hotspur,0,1
+Sunderland,Tottenham Hotspur,1,2
+Swansea City,Tottenham Hotspur,1,3
+West Bromwich Albion,Tottenham Hotspur,3,3
+West Ham United,Tottenham Hotspur,2,0
+Arsenal,West Bromwich Albion,1,0
+Aston Villa,West Bromwich Albion,4,3
+Cardiff City,West Bromwich Albion,1,0
+Chelsea,West Bromwich Albion,2,2
+Crystal Palace,West Bromwich Albion,3,1
+Everton,West Bromwich Albion,0,0
+Fulham,West Bromwich Albion,1,1
+Hull City,West Bromwich Albion,2,0
+Liverpool,West Bromwich Albion,4,1
+Manchester City,West Bromwich Albion,3,1
+Manchester United,West Bromwich Albion,1,2
+Newcastle United,West Bromwich Albion,2,1
+Norwich City,West Bromwich Albion,0,1
+Southampton,West Bromwich Albion,1,0
+Stoke City,West Bromwich Albion,0,0
+Sunderland,West Bromwich Albion,2,0
+Swansea City,West Bromwich Albion,1,2
+Tottenham Hotspur,West Bromwich Albion,1,1
+West Ham United,West Bromwich Albion,3,3
+Arsenal,West Ham United,3,1
+Aston Villa,West Ham United,0,2
+Cardiff City,West Ham United,0,2
+Chelsea,West Ham United,0,0
+Crystal Palace,West Ham United,1,0
+Everton,West Ham United,1,0
+Fulham,West Ham United,2,1
+Hull City,West Ham United,1,0
+Liverpool,West Ham United,4,1
+Manchester City,West Ham United,2,0
+Manchester United,West Ham United,3,1
+Newcastle United,West Ham United,0,0
+Norwich City,West Ham United,3,1
+Southampton,West Ham United,0,0
+Stoke City,West Ham United,3,1
+Sunderland,West Ham United,1,2
+Swansea City,West Ham United,0,0
+Tottenham Hotspur,West Ham United,0,3
+West Bromwich Albion,West Ham United,1,0
