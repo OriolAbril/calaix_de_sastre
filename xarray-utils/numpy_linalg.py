@@ -14,11 +14,12 @@ def _find_square_matrix_dims(da):
     # TODO: set some convention for square matrices like pairing "dim" with "dim_bis" or whatever
     # or use some metadata to track that
     dims = da.dims
+    dim_lengths = da.shape
     for i, dim in enumerate(dims):
-        dim_length = len(da[dim])
+        dim_length = dim_lengths[i]
         for j in range(i):
             dim_bis = dims[j]
-            if len(da[dim_bis]) == dim_length:
+            if dim_lengths[j] == dim_length:
                 return (dim, dim_bis)
     return None
 
