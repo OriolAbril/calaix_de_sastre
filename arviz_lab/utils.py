@@ -2,6 +2,7 @@ import numpy as np
 import numba
 import scipy
 import xarray as xr
+from scipy.fftpack import next_fast_len
 from xarray_einstats.einops import raw_rearrange
 from xarray_einstats import stats
 
@@ -53,6 +54,7 @@ def _z_scale(da, **kwargs):
 def _split_chains(da, **kwargs):
     """Split and stack chains."""
     half = len(da.draw) // 2
+    kwargs = kwargs.copy()
     if kwargs.get("dask", None) == "parallelized":
         # here we force dask="allowed" because einops doesn't play well with parallelized mode
         kwargs["dask"] = "allowed"
@@ -119,13 +121,67 @@ def rhat_einstats(ds, method="rank", **kwargs):
     if isinstance(ds, xr.DataArray):
         return rhat_func(ds, **kwargs)
 
+# will move to einstats
+# I tried https://github.com/xgcm/xrft but it only wraps rfftn and was more a headache than
+# help, rfft and irfft exist both in numpy and dask, so the wrappers below will
+# support dask="allowed" without problem
+def rfft(da, dim=None, n=None, prefix="freq_", **kwargs):
+    return xr.apply_ufunc(
+        np.fft.rfft,
+        da,
+        input_core_dims=[[dim]],
+        output_core_dims=[[f"{prefix}{dim}"]],
+        kwargs={"n": n},
+        **kwargs
+    )
+
+def irfft(da, dim=None, n=None, prefix="freq_", **kwargs):
+    out_dim = dim.replace(prefix, "")
+    return xr.apply_ufunc(
+        np.fft.irfft,
+        da,
+        input_core_dims=[[dim]],
+        output_core_dims=[[out_dim]],
+        kwargs={"n": n},
+        **kwargs
+    )
+
+def autocov(da, dim="draw", **kwargs):
+    """Compute autocovariance estimates for every lag for the input array.
+
+    Parameters
+    ----------
+    ary : xr.DataArray
+        A DataArray containing MCMC samples. It must have the ``draw`` dimension
+
+    Returns
+    -------
+    DataArray same size as the input array
+    """
+    draw_coord = da[dim]
+    n = len(draw_coord)
+    m = next_fast_len(2 * n)
+
+
+    fft_da = rfft(da - da.mean(dim), n=m, dim=dim, **kwargs)
+    fft_da *= np.conjugate(fft_da)
+
+    cov = irfft(fft_da, n=m, dim=f"freq_{dim}", **kwargs).isel(draw=slice(None, n))
+    cov /= n
+
+    return cov.assign_coords({dim: draw_coord})
+
+def autocorr(da, dim="draw", **kwargs):
+    da = autocov(da, dim=dim, **kwargs)
+    return da / da.isel({dim: 0})
+
 @numba.guvectorize(
     [
         "void(float64[:,:], float64, float64[:])",
     ],
     "(n,m),()->()",
     cache=True,
-    target="parallel",
+    target="cpu",
     nopython=True
 )
 def geyer(acov, chain_mean_term, tau_hat):
@@ -164,3 +220,58 @@ def geyer(acov, chain_mean_term, tau_hat):
         t += 2
 
     tau_hat += -1.0 + 2.0 * np.sum(rho_hat_t[: max_t + 1]) + np.sum(rho_hat_t[max_t + 1 : max_t + 2])
+
+def _ess(da, relative=False, **kwargs):
+    n_chain = len(da["chain"])
+    n_draw = len(da["draw"])
+    maxmin_keep = da.max(("chain", "draw")) - da.min(("chain", "draw")) > np.finfo(float).resolution
+    if np.any(~maxmin_keep):
+        if not np.any(maxmin_keep):
+            return xr.zeros_like(maxmin_keep, dtype=float) + n_chain * n_draw
+        da = da.where(maxmin_keep, drop=True)
+
+    acov = autocov(da, **kwargs)
+    chain_mean = da.mean("draw")
+    mean_var = (acov.isel(draw=0) * n_draw / (n_draw - 1)).mean("chain")
+    chain_mean_term = chain_mean.var(dim="chain", ddof=1) if n_chain > 1 else 0
+
+    kwargs = kwargs.copy()
+    if kwargs.get("dask", None) == "allowed":
+        kwargs["dask"] = "parallelized"
+    tau_hat = xr.apply_ufunc(
+        geyer,
+        acov,
+        chain_mean_term,
+        input_core_dims=[["chain", "draw"], []],
+        output_core_dims=[[]],
+        **kwargs
+    )
+
+    ess = n_chain * n_draw
+    tau_hat = tau_hat.where(tau_hat > 1 / np.log10(ess), 1 / np.log10(ess))
+    ess = (1 if relative else ess) / tau_hat
+
+    if np.any(~maxmin_keep):
+        ess_aux = xr.zeros_like(maxmin_keep.where(~maxmin_keep, drop=True)) + n_chain * n_draw
+        return xr.merge((ess, ess_aux), join="outer")
+    return ess
+
+def _ess_mean(da, relative=False, **kwargs):
+    return _ess(_split_chains(da, **kwargs), relative=relative, **kwargs)
+
+def _ess_bulk(da, relative=False, **kwargs):
+    da = _z_scale(_split_chains(da, **kwargs), **kwargs)
+    return _ess(da, relative=relative, **kwargs)
+
+def ess_einstats(ds, method="bulk", **kwargs):
+    func_map = {
+        "mean": _ess_mean,
+        "bulk": _ess_bulk
+    }
+    if method not in func_map:
+        raise ValueError("method not recognized")
+    ess_func = func_map[method]
+    if isinstance(ds, xr.Dataset):
+        return ds.map(ess_func, **kwargs)
+    if isinstance(ds, xr.DataArray):
+        return ess_func(ds, **kwargs)
