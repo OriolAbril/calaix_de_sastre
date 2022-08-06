@@ -232,11 +232,10 @@ def _ess(da, relative=False, **kwargs):
 
     acov = autocov(da, **kwargs)
     chain_mean = da.mean("draw")
-    mean_var = (acov.isel(draw=0) * n_draw / (n_draw - 1)).mean("chain")
     chain_mean_term = chain_mean.var(dim="chain", ddof=1) if n_chain > 1 else 0
 
     kwargs = kwargs.copy()
-    if kwargs.get("dask", None) == "allowed":
+    if kwargs.get("dask", None) == "allowed" and kwargs.get("dask_override", False):
         kwargs["dask"] = "parallelized"
     tau_hat = xr.apply_ufunc(
         geyer,
